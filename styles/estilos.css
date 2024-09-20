@@ -23,7 +23,6 @@ header {
 main {
     padding: 20px;
     background-color: #1c1c1c;
-    /* No uses min-height aquí */
 }
 #logoAni {
     max-width: 150px;
