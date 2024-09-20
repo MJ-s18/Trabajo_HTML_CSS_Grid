@@ -1,18 +1,23 @@
-/* Estructura Grid principal */
 html, body {
     height: 100%;
     margin: 0;
     display: grid;
-    grid-template-rows: auto 1fr auto; /* Header, Main, Footer */
-}
-
-body {
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
     background-color: #1c1c1c;
     font-family: 'Courier New', Courier, monospace;
     color: #fff;
 }
-/* Header */
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
 header {
+    grid-area: header;
     background-color: #333;
     color: #fff;
     padding: 20px;
@@ -20,10 +25,16 @@ header {
     justify-content: space-between;
     align-items: center;
 }
+
 main {
+    grid-area: main;
     padding: 20px;
     background-color: #1c1c1c;
 }
+#logoAni {
+    max-width: 150px;
+}
+
 #logoAni {
     max-width: 150px;
 }
@@ -213,16 +224,13 @@ textarea {
     background-color: #333;
     color: #fff;
 }
-
 .checkbox {
     display: flex;
     margin: 20px;
 }
-
 input[type="checkbox"] {
     margin-right: 20px;
 }
-
 button {
     background-color: #BB00FF;
     color: #fff;
@@ -234,7 +242,6 @@ button {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-
 /*-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+
 -+-+-+-+-+--++--+--+-Estilos De Contacto-+-+-+-+-+--++--+-+-+-+-+-+-+-+--+-+-+-+
 -+-+-+--+-+--+-+-+-+-+--+-+--+-+-+--+-+-+-+-+-+---+-+-+-+--+-+-+-+-+--+-+-+-+-+-*/
@@ -247,7 +254,6 @@ button {
     background-color: #222;
     align-items: stretch;
 }
-
 #ubi-tienda {
     display: grid;
     grid-template-rows: auto auto;
@@ -256,7 +262,6 @@ button {
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
 .map-container {
     position: relative;
     padding-bottom: 56.25%;
@@ -264,7 +269,6 @@ button {
     height: 0;
     overflow: hidden;
 }
-
 .map-container iframe {
     position: absolute;
     top: 0;
@@ -273,7 +277,6 @@ button {
     height: 100%;
     border: none;
 }
-
 .datos-container {
     background-color: #444;
     color: #fff;
@@ -284,7 +287,6 @@ button {
     justify-content: center;
     align-items: flex-start;
 }
-
 .img-empresa {
     text-align: center;
     background-color: #333;
@@ -305,6 +307,7 @@ button {
 -+-+-+-+-+--++--+--+-Estilos Del Footer-+-+-+-+-+--++--+-+-+-+-+-+-+-+--+-+-+-+
 -+-+-+--+-+--+-+-+-+-+--+-+--+-+-+--+-+-+-+-+-+---+-+-+-+--+-+-+-+-+--+-+-+-+-+-*/
 footer {
+    grid-area: footer;
     background-color: #333;
     color: #fff;
     text-align: center;
@@ -333,9 +336,18 @@ button:hover {
     width: 60px;
     height: 60px;
 }
-
-/* Para pantallas pequeñas (disposición en una columna) */
 @media (max-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+    main {
+        flex-grow: 1;
+    }
+
+    footer {
+        margin-top: auto;
+    }
     header {
         flex-direction: column;
         align-items: center;
@@ -359,7 +371,6 @@ button:hover {
 
     .headInx {
         grid-column: 1 / 2;
-        /* Para pantallas pequeñas ocupa solo una columna */
     }
 
     .seccionIndex img {
@@ -372,7 +383,6 @@ button:hover {
 
     .grid-container {
         grid-template-columns: 1fr;
-        /* Solo una columna en pantallas pequeñas */
         gap: 10px;
     }
 
@@ -397,5 +407,74 @@ button:hover {
     footer {
         display: flex;
         flex-direction: column-reverse;
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    header {
+        padding: 20px;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    footer {
+        padding: 20px;
+    }
+
+    .enlace {
+        font-size: 18px;
+    }
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+    header {
+        padding: 20px;
+    }
+
+    #logoAni {
+        width: 100px;
+    }
+
+    .enlace {
+        font-size: 18px;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    footer {
+        padding: 20px;
+    }
+
+    .social-li img {
+        width: 50px;
+        height: 50px;
+    }
+}
+@media (min-width: 1440px) {
+    header {
+        padding: 20px;
+    }
+
+    #logoAni {
+        width: 120px;
+    }
+
+    .enlace {
+        font-size: 20px;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    footer {
+        padding: 20px;
+    }
+
+    .social-li img {
+        width: 60px;
+        height: 60px;
     }
 }
