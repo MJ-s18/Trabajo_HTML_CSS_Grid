@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Threads - Presupuesto</title>
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="stylesheet" href="../styles/estilos.css">
+</head>
+<body>
+    <header>
+        <img src="../assets/img/cráneo-96.png" alt="logoDT" id="logoAni" width="96" height="96">
+        <nav>
+            <ul class="liNav">
+                <li>
+                    <a class="enlace" href="../index.html">Inicio</a>
+                </li>
+                <li>
+                    <a class="enlace" href="productos.html">Galeria</a>
+                </li>
+                <li>
+                    <a class="enlace active" href="#">presupuesto</a>
+                </li>
+                <li>
+                    <a class="enlace" href="contacto.html">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="presupuesto">
+        <h2>Solicitar presupuesto</h2>
+        <form action="#" method="post">
+            <input type="text" name="nombre" id="nombre" placeholder="Nombre" pattern="[A-Z a-z] {3,15}"
+            title="Escriba solo letras entre 3 y 15 caracteres" required>
+
+            <input type="email" name="mail" id="mail" placeholder="Correo Electronico" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+            title="Debe ser un correo válido, ej: correo@ejemplo.com" required>
+
+            <input type="tel" name="telefono" id="telefono" placeholder="Telefono" pattern="[0-9] {9}"
+            title="Escriba los 9 numeros de su telefono movil " required>
+            <textarea placeholder="Solicite mas informacion" title="El mensaje debe tener entre 10 y 500 caracteres." required></textarea>
+            <div class="checkbox">
+                <label for="privacidad">Política de privacidad</label>
+                <input type="checkbox" name="privacidad" id="privacidad">
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Dark Threads. Todos los derechos reservados.</p>
+        <p>Dark Threads | Direccion: Calle Falsa 321 , Madrid </p>
+        <ul class="social-li">
+            <li>
+                <a href="https://www.instagram.com/"><img src="../assets/icons/icon-instagram-100.png" alt="enlace-instagram" width="100" height="100"></a>
+            </li>
+            <li>
+                <a href="https://twitter.com/?lang=es"><img src="../assets/icons/icon-twitterx-100.png" alt="enlace-twitter" width="100" height="100"></a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/"><img src="../assets/icons/icon-facebook-nuevo-100.png" alt="enlace-facebook" width="100" height="100"></a>
+            </li>
+        </ul>
+    </footer>
+</body>
+</html>

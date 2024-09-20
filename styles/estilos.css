@@ -1,0 +1,409 @@
+/* Estructura Grid principal */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Header, Main, Footer */
+}
+
+body {
+    background-color: #1c1c1c;
+    font-family: 'Courier New', Courier, monospace;
+    color: #fff;
+}
+/* Header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+main {
+    padding: 20px;
+    background-color: #1c1c1c;
+    /* No uses min-height aquí */
+}
+#logoAni {
+    max-width: 150px;
+}
+
+/*-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+
+-+-+-+-+-+--++--+--+-Estilo del menu de navegacion-+-+-+-+-+--++--+-+-+-+-+-+-+-+-
+-+-+-+--+-+--+-+-+-+-+--+-+--+-+-+--+-+-+-+-+-+---+-+-+-+--+-+-+-+-+--+-+-+-+-+-*/
+.liNav {
+    list-style: none;
+    display: flex;
+}
+
+.enlace {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    font-size: 20px;
+    transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+.active {
+    border-bottom: 2px solid #BB00FF;
+}
+
+.enlace:hover {
+    font-weight: bold;
+    color: #BB00FF;
+}
+
+/*-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+
+-+-+-+-+-+--++--+--+-Estilos index-+-+-+-+-+--++--+-+-+-+-+-+-+-+--+-+-+-+-+-+-+-+
+-+-+-+--+-+--+-+-+-+-+--+-+--+-+-+--+-+-+-+-+-+---+-+-+-+--+-+-+-+-+--+-+-+-+-+-*/
+/* Estilos principales */
+main.cuerpo-index {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    padding: 20px;
+    margin: 20px auto;
+}
+
+h2,
+h1 {
+    color: #BB00FF;
+}
+
+.headInx {
+    grid-column: 1 / 4;
+    /* Hace que la primera sección ocupe las 3 columnas */
+    text-align: center;
+    padding: 20px;
+}
+
+.headInx {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.headInx a {
+    margin-top: 15px
+}
+
+.btn {
+    background-color: #BB00FF;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #9900cc;
+}
+
+.seccionIndex {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.seccionIndex:hover {
+    box-shadow: 0 6px 12px rgba(170, 4, 247, 0.4);
+    transform: translateY(-5px);
+    /* Un ligero efecto de elevación */
+    transition: all 0.3s ease;
+    /* Suaviza la transición */
+}
+
+.seccionIndex img {
+    width: 300px;
+    height: auto;
+    /* Mantiene la proporción de la imagen */
+    border-radius: 5%;
+    padding: 2%;
+}
+
+/*-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+
+-+-+-+-+-+--++--+--+-Estilos De Galeria-+-+-+-+-+--++--+-+-+-+-+-+-+-+--+-+-+-+-+-+-+-+
+-+-+-+--+-+--+-+-+-+-+--+-+--+-+-+--+-+-+-+-+-+---+-+-+-+--+-+-+-+-+--+-+-+-+-+-*/
+.galeria {
+    padding: 20px;
+    text-align: center;
+}
+
+.galeria h1 {
+    color: #BB00FF;
+    margin-bottom: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.grid-item {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    /* La imagen se adapta al contenedor sin recortarse */
+    border-radius: 5%;
+
+}
+
+.grid-item p {
+    margin-top: 10px;
+    color: #fff;
+    font-size: 1.1em;
+}
+
+.grid-item:hover {
+    background-color: #1a1a1a;
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+/*-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+
+-+-+-+-+-+--++--+--+-Estilos De Presupuesto-+-+-+-+-+--++--+-+-+-+-+-+-+-+--+-+-+-+
+-+-+-+--+-+--+-+-+-+-+--+-+--+-+-+--+-+-+-+-+-+---+-+-+-+--+-+-+-+-+--+-+-+-+-+-*/
+
+.presupuesto {
+    padding: 60px 20px;
+    background-color: #1f1f1f;
+}
+
+.presupuesto h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 40px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input,
+textarea {
+    width: 90%;
+    max-width: 600px;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+}
+
+.checkbox {
+    display: flex;
+    margin: 20px;
+}
+
+input[type="checkbox"] {
+    margin-right: 20px;
+}
+
+button {
+    background-color: #BB00FF;
+    color: #fff;
+
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/*-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+
+-+-+-+-+-+--++--+--+-Estilos De Contacto-+-+-+-+-+--++--+-+-+-+-+-+-+-+--+-+-+-+
+-+-+-+--+-+--+-+-+-+-+--+-+--+-+-+--+-+-+-+-+-+---+-+-+-+--+-+-+-+-+--+-+-+-+-+-*/
+/* Estilo general del contenedor principal */
+.contacto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    background-color: #222;
+    align-items: stretch;
+}
+
+#ubi-tienda {
+    display: grid;
+    grid-template-rows: auto auto;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.map-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* Aspect ratio 16:9 */
+    height: 0;
+    overflow: hidden;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.datos-container {
+    background-color: #444;
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.img-empresa {
+    text-align: center;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.img-empresa img {
+    width: 100%;
+    height: auto;
+    max-height: 100%; /* Limita la altura de la imagen para que no supere el contenedor */
+    object-fit: cover; /* Para que se ajuste y mantenga las proporciones */
+    border-radius: 5px;
+}
+
+/*-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+
+-+-+-+-+-+--++--+--+-Estilos Del Footer-+-+-+-+-+--++--+-+-+-+-+-+-+-+--+-+-+-+
+-+-+-+--+-+--+-+-+-+-+--+-+--+-+-+--+-+-+-+-+-+---+-+-+-+--+-+-+-+-+--+-+-+-+-+-*/
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer p:first-child {
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: rgba(170, 4, 247, 0.4);
+}
+
+.social-li {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.social-li img {
+    width: 60px;
+    height: 60px;
+}
+
+/* Para pantallas pequeñas (disposición en una columna) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        /* Añadir espacio entre el logo y el menú */
+    }
+
+    /* Main sigue ocupando todo el ancho */
+    main {
+        padding: 10px;
+    }
+    h1, h2 {
+        font-size: 1.5em; /* Ajusta el tamaño de los encabezados */
+    }
+
+    .enlace {
+        font-size: 18px; /* Ajusta el tamaño del texto en los enlaces */
+    }
+    main.cuerpo-index {
+        grid-template-columns: 1fr;
+        /* Solo una columna */
+    }
+
+    .headInx {
+        grid-column: 1 / 2;
+        /* Para pantallas pequeñas ocupa solo una columna */
+    }
+
+    .seccionIndex img {
+        width: 80%;
+        /* Ajusta este valor para pantallas pequeñas */
+
+    }
+
+    .galeria {
+        padding: 10px;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+        /* Solo una columna en pantallas pequeñas */
+        gap: 10px;
+        /* Reduce el espacio entre elementos */
+    }
+
+    .grid-item {
+        padding: 15px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .grid-item img {
+        width: 80%;
+        /* Reduce el tamaño de las imágenes en pantallas pequeñas */
+    }
+
+    .contacto {
+        grid-template-columns: 1fr;
+        /* Una sola columna en pantallas pequeñas */
+    }
+
+    #ubi-tienda,
+    .img-empresa {
+        margin-bottom: 20px;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
