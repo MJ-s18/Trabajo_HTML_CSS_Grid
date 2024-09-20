@@ -340,19 +340,17 @@ button:hover {
         flex-direction: column;
         align-items: center;
         gap: 15px;
-        /* Añadir espacio entre el logo y el menú */
     }
 
-    /* Main sigue ocupando todo el ancho */
     main {
         padding: 10px;
     }
     h1, h2 {
-        font-size: 1.5em; /* Ajusta el tamaño de los encabezados */
+        font-size: 1.5em;
     }
 
     .enlace {
-        font-size: 18px; /* Ajusta el tamaño del texto en los enlaces */
+        font-size: 18px;
     }
     main.cuerpo-index {
         grid-template-columns: 1fr;
@@ -366,8 +364,6 @@ button:hover {
 
     .seccionIndex img {
         width: 80%;
-        /* Ajusta este valor para pantallas pequeñas */
-
     }
 
     .galeria {
@@ -378,7 +374,6 @@ button:hover {
         grid-template-columns: 1fr;
         /* Solo una columna en pantallas pequeñas */
         gap: 10px;
-        /* Reduce el espacio entre elementos */
     }
 
     .grid-item {
@@ -388,12 +383,10 @@ button:hover {
 
     .grid-item img {
         width: 80%;
-        /* Reduce el tamaño de las imágenes en pantallas pequeñas */
     }
 
     .contacto {
         grid-template-columns: 1fr;
-        /* Una sola columna en pantallas pequeñas */
     }
 
     #ubi-tienda,
